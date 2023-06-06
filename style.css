@@ -1,0 +1,369 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Thin', sans-serif;
+    font-family: 'Roboto Light', sans-serif;
+    font-family: 'Roboto Medium', sans-serif;
+    font-family: 'Roboto Black', sans-serif;
+    font-size: 100%;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.pageTitle {
+    text-align: start;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100%-2rem);
+    padding-left: 2rem;
+    background-color: black;
+    margin: none;
+}
+
+.imageTopBar {
+    width: 60%;
+    float: right;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.topBar .contentContainer span {
+    font-size: 2rem;
+}
+
+.shopBtn {
+    width: 8rem;
+    height: 3rem;
+    margin-top: 2rem;
+    font-family: inherit;
+    border-color: rgb(118, 185, 0);
+    background-color: rgb(118, 185, 0);
+    transition: scale .15s ease-in;
+    border: none;
+}
+
+.shopBtn:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.productList {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.catagoryTitle h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.gamingProducts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.gamingProducts .card {
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: calc(25%-2rem);
+    padding-bottom: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.15s ease-in,
+        scale 0.15s ease-in;
+}
+
+.gamingProducts .card:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.6);
+    scale: 1.02;
+}
+
+.cardImg {
+    flex: 1;
+}
+
+.cardImg img {
+    width: 100%;
+    height: auto;
+}
+
+.cardContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.cardContent span {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: rgb(221, 221, 221);
+}
+
+.cardBtn {
+    margin-top: 10px;
+    color: white;
+    font-size: .8rem;
+    text-decoration: none;
+    transition: scale .15s ease-in;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footerLinks {
+    height: 5%;
+    width: calc(100%-2rem);
+    background-color: rgb(10, 10, 10);
+    font-size: 1rem;
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.footerLinks li a {
+    color: white;
+    text-decoration: none;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.footerLinks li {
+    display: inline-block;
+    font-size: 1rem;
+    border-right: 1px solid rgb(120, 120, 120);
+    transition: scale 0.05s ease-in;
+}
+
+.footerLinks li:hover {
+    scale: 1.02;
+}
+
+.footerLinks li:last-child {
+    border-right: none;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 426px) {
+
+    html {
+        font-size: 80%;
+    }
+
+    .topBar {
+        flex-direction: column;
+        padding-left: 0.5rem;
+    }
+
+    .catagoryTitle {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .imageTopBar {
+        width: 100%;
+        float: none;
+    }
+
+    .contentContainer {
+        align-items: center;
+    }
+
+    .shopBtn {
+        width: 6rem;
+        height: 2.5rem;
+    }
+
+    .productList {
+        margin-bottom: 1rem;
+    }
+
+    .catagoryTitle h2 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .gamingProducts {
+        flex-direction: column;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .cardImg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardContent span {
+        font-size: 1rem;
+    }
+
+    .cardBtn {
+        font-size: 0.7rem;
+    }
+
+    .footerLinks {
+        padding-left: 0.5rem;
+    }
+
+    .footerLinks li a {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+}
+
+/* Tablet Responsive */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+
+    .pageTitle {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .topBar {
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .imageTopBar {
+        width: 100%;
+        float: none;
+    }
+
+    .contentContainer {
+        align-items: center;
+    }
+
+    .topBar .contentContainer span {
+        font-size: 1.5rem;
+    }
+
+    .shopBtn {
+        width: 6rem;
+        height: 2.5rem;
+        margin-top: 1rem;
+    }
+
+    .productList {
+        margin-bottom: 1rem;
+    }
+
+    .catagoryTitle h2 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .gamingProducts .card {
+        width: 80%;
+    }
+    .gamingProducts {
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .cardImg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardContent span {
+        font-size: 1.5rem;
+    }
+
+    .cardBtn {
+        font-size: 1rem;
+    }
+
+    .footerLinks {
+        font-size: 0.8rem;
+        padding-left: 1rem;
+    }
+}
+
+/* Laptop 1024px Responsive */
+@media only screen and (max-width: 1025px) and (min-width: 769px) {
+
+    html {
+        font-size: 90%;
+    }
+
+    .topBar {
+        padding-left: 1rem;
+    }
+
+    .shopBtn {
+        width: 7rem;
+        height: 2.8rem;
+    }
+
+    .productList {
+        margin-bottom: 1.5rem;
+    }
+
+    .catagoryTitle h2 {
+        font-size: 1.8rem;
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .gamingProducts {
+        gap: 0.8rem;
+    }
+
+    .cardContent span {
+        font-size: 1.1rem;
+    }
+
+    .gamingProducts .card {
+        width: 200px;
+    }
+
+    .cardBtn {
+        font-size: 0.75rem;
+    }
+
+    .footerLinks {
+        padding-left: 1rem;
+    }
+
+    .footerLinks li a {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
+}
